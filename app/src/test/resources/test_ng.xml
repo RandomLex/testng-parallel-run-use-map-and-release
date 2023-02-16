@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="My Suite" parallel="true" thread-count="2">
+    <test name="Calc Tests">
+        <groups>
+            <run>
+                <include name="myGroup" />
+            </run>
+        </groups>
+        <classes>
+            <class name="com.multimodule.app.CalcTest" />
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="com.multimodule.app.TestListener" />
+<!--        <listener class-name="com.multimodule.app.RetryAnalyzer" />-->
+    </listeners>
+</suite>
